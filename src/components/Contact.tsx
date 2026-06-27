@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { SectionTitle } from './Reveal';
-import { Linkedin, Github, Mail, ArrowUpRight } from 'lucide-react';
+import { Linkedin, Github, Mail, Phone, ArrowUpRight } from 'lucide-react';
 
 const links = [
   {
@@ -24,6 +24,13 @@ const links = [
     icon: Mail,
     color: '#00FF88',
   },
+  {
+    label: 'Phone',
+    value: '+91 8688924462',
+    href: 'tel:+918688924462',
+    icon: Phone,
+    color: '#00F5FF',
+  },
 ];
 
 export default function Contact() {
@@ -42,7 +49,7 @@ export default function Contact() {
           Reach out — let's build secure systems together.
         </motion.p>
 
-        <div className="grid sm:grid-cols-3 gap-5">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {links.map((l, i) => (
             <motion.a
               key={l.label}
